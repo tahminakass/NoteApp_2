@@ -53,9 +53,6 @@ class OnBoardPagingFragment : Fragment() {
         }
     }
 
-
-
-
     companion object {
         const val ARG_ONBOARD_POSITION = "onBoard"
     }
