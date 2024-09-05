@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#252525"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.onboard.OnBoardPagingFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/circle1"
+            android:src="@drawable/circle"
+            android:layout_width="12dp"
+            android:layout_height="12dp"/>
+
+        <ImageView
+            android:id="@+id/circle2"
+            android:layout_marginHorizontal="8dp"
+            android:src="@drawable/circle_gray"
+            android:layout_width="12dp"
+            android:layout_height="12dp"/>
+
+        <ImageView
+            android:id="@+id/circle3"
+            android:src="@drawable/circle_gray"
+            android:layout_width="12dp"
+            android:layout_height="12dp"/>
+
+    </LinearLayout>
+    
+    <Button
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#D88B02"
+        android:textColor="@color/white"
+        android:id="@+id/btn_start"
+        android:text="Начать"
+        android:textSize="24sp"
+        android:layout_width="230dp"
+        android:layout_height="58dp"/>
+
+
+</LinearLayout>
