@@ -33,4 +33,15 @@
        android:textSize="24sp"
        android:textStyle="bold" />
 
+   <Button
+       android:layout_marginBottom="32dp"
+       android:backgroundTint="#D88B02"
+       android:layout_gravity="bottom|center"
+       android:textColor="@color/white"
+       android:id="@+id/btn_start"
+       android:text="Начать"
+       android:textSize="24sp"
+       android:layout_width="230dp"
+       android:layout_height="58dp"/>
+
 </FrameLayout>

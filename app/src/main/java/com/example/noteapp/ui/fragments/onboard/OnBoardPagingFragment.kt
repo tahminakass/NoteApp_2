@@ -30,13 +30,11 @@ class OnBoardPagingFragment : Fragment() {
             0 -> {
                 binding.lottieAnimationView.setAnimation(R.raw.lotti4)
                txtTitle.text = "Удобство"
-                btnStart.visibility = View.INVISIBLE
                 txtDescription.text = "Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно"
             }
             1 -> {
                 binding.lottieAnimationView.setAnimation(R.raw.lotti2)
                 txtTitle.text = "Организация"
-                btnStart.visibility = View.INVISIBLE
                 txtDescription.text = "Организуйте заметки по папкам и тегам. Легко находите нужную информацию в любое время."
                 circle1.setImageResource(R.drawable.circle_gray)
                 circle2.setImageResource(R.drawable.circle)
@@ -47,10 +45,10 @@ class OnBoardPagingFragment : Fragment() {
                 circle3.setImageResource(R.drawable.circle)
                 circle2.setImageResource(R.drawable.circle_gray)
                 circle1.setImageResource(R.drawable.circle_gray)
-                btnStart.visibility = View.VISIBLE
                 txtDescription.text = "Синхронизация на всех устройствах. Доступ к записям в любое время и в любом месте"
             }
         }
+
     }
 
     companion object {

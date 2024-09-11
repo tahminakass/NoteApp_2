@@ -61,16 +61,7 @@
             android:layout_height="12dp"/>
 
     </LinearLayout>
-    
-    <Button
-        android:layout_marginTop="88dp"
-        android:backgroundTint="#D88B02"
-        android:textColor="@color/white"
-        android:id="@+id/btn_start"
-        android:text="Начать"
-        android:textSize="24sp"
-        android:layout_width="230dp"
-        android:layout_height="58dp"/>
+
 
 
 </LinearLayout>
