@@ -52,11 +52,8 @@ class OnBoardFragment : Fragment() {
                 setCurrentItem(currentItem + 2, true)
             }
         }
-        binding.btnStart.setOnClickListener {
-            val sharedPreferences = PreferenceHelper()
-            sharedPreferences.unit(requireContext())
-            sharedPreferences.isOnBoardShown = true
-            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
+        binding.txtSkip.setOnClickListener {
+            findNavController().navigate(R.id.noteFragment)
         }
     }
 }

@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    private lateinit var sharedPreferenceHelper: PreferenceHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +26,12 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.fragment_container)as NavHostFragment
         navController= navHostFragment.navController
 
-        val sharedPreferences = PreferenceHelper()
-        sharedPreferences.unit(this)
-        if (sharedPreferences.isOnBoardShown) {
+        sharedPreferenceHelper = PreferenceHelper(this@MainActivity)
+
+        if (!sharedPreferenceHelper.isBoardingComplete()) {
+            sharedPreferenceHelper.setOnBoardingComplete(true)
+        } else {
             navController.navigate(R.id.noteFragment)
-        } else if (!sharedPreferences.isOnBoardShown) {
-            navController.navigate(R.id.onBoardFragment)
         }
     }
 }
