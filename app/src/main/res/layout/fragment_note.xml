@@ -40,47 +40,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/container_search"
+    <EditText
+        android:id="@+id/et_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/bg_search_et_shape"
-        android:orientation="horizontal"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_et_search"
+        android:drawableStart="@drawable/search"
+        android:hint="   Поиск заметок"
+        android:padding="12dp"
+        android:textColorHint="#E2D5D5"
+        app:layout_constraintTop_toBottomOf="@id/all_notes" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/all_notes">
+        app:layout_constraintTop_toBottomOf="@id/et_search" />
 
-        <ImageView
-            android:layout_gravity="center"
-            android:src="@drawable/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        
-        <TextView
-            android:id="@+id/et_serach"
-            android:layout_marginStart="20dp"
-            android:hint="Поиск заметок"
-            android:textColorHint="80FFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-    </LinearLayout>
-    
-<androidx.appcompat.widget.AppCompatImageButton
-    android:id="@+id/btn_add_note"
-    android:layout_marginEnd="24dp"
-    android:layout_marginBottom="36dp"
-    android:background="@drawable/bg_btn_add_shape"
-    android:src="@drawable/is_plus"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:layout_width="46dp"
-    android:layout_height="46dp"/>
-
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_add_note"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/bg_btn_add_shape"
+        android:src="@drawable/is_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

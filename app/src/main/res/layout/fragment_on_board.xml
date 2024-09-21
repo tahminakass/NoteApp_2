@@ -8,25 +8,26 @@
    <androidx.viewpager2.widget.ViewPager2
        android:id="@+id/view_pager2"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"/>
+       android:layout_height="match_parent" />
 
    <TextView
        android:id="@+id/txt_skip"
-       android:textSize="16sp"
-       android:textColor="#D88B02"
-       android:textStyle="bold"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
        android:layout_gravity="end"
        android:layout_marginTop="40dp"
        android:layout_marginEnd="16dp"
        android:text="Пропустить"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"/>
+       android:textColor="#D88B02"
+       android:textSize="16sp"
+       android:textStyle="bold" />
 
    <TextView
-       android:layout_gravity="center|top"
-       android:layout_marginTop="58dp"
+       android:id="@+id/txt_notes"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:layout_gravity="center|top"
+       android:layout_marginTop="58dp"
        android:layout_marginBottom="448dp"
        android:text="Notes"
        android:textColor="@color/white"
@@ -34,14 +35,14 @@
        android:textStyle="bold" />
 
    <Button
+       android:id="@+id/btn_start"
+       android:layout_width="230dp"
+       android:layout_height="58dp"
+       android:layout_gravity="bottom|center"
        android:layout_marginBottom="32dp"
        android:backgroundTint="#D88B02"
-       android:layout_gravity="bottom|center"
-       android:textColor="@color/white"
-       android:id="@+id/btn_start"
        android:text="Начать"
-       android:textSize="24sp"
-       android:layout_width="230dp"
-       android:layout_height="58dp"/>
+       android:textColor="@color/white"
+       android:textSize="24sp" />
 
 </FrameLayout>

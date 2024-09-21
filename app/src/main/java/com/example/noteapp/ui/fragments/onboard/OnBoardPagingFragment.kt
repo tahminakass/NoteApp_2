@@ -29,7 +29,7 @@ class OnBoardPagingFragment : Fragment() {
         when(requireArguments().getInt(ARG_ONBOARD_POSITION)) {
             0 -> {
                 binding.lottieAnimationView.setAnimation(R.raw.lotti4)
-               txtTitle.text = "Удобство"
+                txtTitle.text = "Удобство"
                 txtDescription.text = "Создавайте заметки в два клика! Записывайте мысли, идеи и важные задачи мгновенно"
             }
             1 -> {

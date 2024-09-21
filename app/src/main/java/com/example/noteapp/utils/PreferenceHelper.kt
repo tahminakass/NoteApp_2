@@ -11,11 +11,12 @@ class PreferenceHelper {
         sharedPreferences = context.getSharedPreferences("shared", Context.MODE_PRIVATE)
     }
 
-    var text: String?
-        get() = sharedPreferences.getString("text", "")
-        set(value) = sharedPreferences.edit().putString("text", value)!!.apply()
-
     var isOnBoardShown: Boolean
         get() = sharedPreferences.getBoolean("board", false)
         set(value) = sharedPreferences.edit().putBoolean("board", value).apply()
+
+    var isRecyclerViewGrid: Boolean
+        get() = sharedPreferences.getBoolean("recyclerview", false)
+        set(value) = sharedPreferences.edit().putBoolean("recyclerview", value).apply()
+
 }
