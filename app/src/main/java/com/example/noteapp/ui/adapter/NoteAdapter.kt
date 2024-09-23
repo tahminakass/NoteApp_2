@@ -2,12 +2,15 @@ package com.example.noteapp.ui.adapter
 
 import android.graphics.Color
 import android.provider.ContactsContract.CommonDataKinds.Note
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.data.models.NoteModel
+import com.example.noteapp.R
 import com.example.noteapp.databinding.ItemNoteBinding
 import com.example.noteapp.interfaces.OnClickItem
 
@@ -16,14 +19,23 @@ class NoteAdapter(
     private val onClick: OnClickItem
 
 ) : ListAdapter<NoteModel, NoteAdapter.ViewHolder>(DiffCallback()) {
+
     class ViewHolder(private val binding: ItemNoteBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun onBind(item: NoteModel) {
             binding.itemTitle.text = item.title
             binding.itemDescription.text = item.description
-            binding.itemDate.text =item.date
+            binding.itemDate.text = item.date
             binding.itemTime.text = item.time
-            binding.containerNote.setBackgroundColor(Color.parseColor(item.color))
+
+            // Установка фона контейнера
+            val context = binding.root.context
+            Log.e("TAG", "onBind: ${item.color}", )
+            binding.containerNote.background = ContextCompat.getDrawable(context, item.color)
+
+            // Альтернатива: если нужно установить цвет через Color.parseColor()
+            // binding.containerNote.setBackgroundColor(Color.parseColor(item.color)) // предполагается, что item.color - строка с цветом
         }
     }
 
@@ -35,6 +47,7 @@ class NoteAdapter(
             )
         )
     }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind(getItem(position))
 

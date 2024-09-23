@@ -51,10 +51,9 @@ class NoteFragment : Fragment(), OnClickItem {
             adapter = noteAdapter
         }
     }
-
     private fun setUpListeners() = with(binding) {
         btnAddNote.setOnClickListener {
-            findNavController().navigate(R.id.noteDetailFragment)
+            findNavController().navigate(NoteFragmentDirections.actionNoteFragmentToNoteDetailFragment(-1))
         }
         btnChangerRv.setOnClickListener {
             val sharedPreferences = PreferenceHelper()

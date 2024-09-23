@@ -9,7 +9,7 @@ data class NoteModel(
     val description: String,
     val date: String,
     val time: String,
-    val color: String
+    val color: Int
 
 ) {
     @PrimaryKey(autoGenerate = true)

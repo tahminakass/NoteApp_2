@@ -10,9 +10,9 @@
     
     <LinearLayout
         android:id="@+id/container_note"
-        tools:background="#CE9A18"
         android:layout_width="match_parent"
         android:padding="12dp"
+        android:background="@drawable/ic_style_yellow"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
