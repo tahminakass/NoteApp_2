@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1041787939651",
+    "project_id": "nopeapp-c3815",
+    "storage_bucket": "nopeapp-c3815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041787939651:android:c457831e2f26e92d7d5df6",
+        "android_client_info": {
+          "package_name": "com.example.noteapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVtJelm6qyx394R7m2RHbnUl49gLxZ6Hg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
