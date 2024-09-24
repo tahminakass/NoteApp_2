@@ -39,9 +39,9 @@ class NoteDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        upDateNote() // загрузка существующей заметки
-        setUpListeners() // настройка событий
-        displayCurrentDateTime() // отображение текущих даты и времени
+        upDateNote()
+        setUpListeners()
+        displayCurrentDateTime()
     }
 
     private fun upDateNote() {
@@ -51,15 +51,14 @@ class NoteDetailFragment : Fragment() {
             argsNote?.let { item ->
                 binding.etTitle.setText(item.title)
                 binding.etAddDescription.setText(item.description)
-               
-                savedColor = item.color // сохраняем текущий цвет
-                setCheckedRadioButton(item.color) // устанавливаем выбранную радиокнопку
+
+                savedColor = item.color
+                setCheckedRadioButton(item.color)
             }
         }
     }
 
     private fun setCheckedRadioButton(color: Int) {
-        // Установка выбранного цвета в RadioButton
         when (color) {
             R.drawable.ic_style_gray -> binding.rb1.isChecked = true
             R.drawable.ic_style_yellow -> binding.rb2.isChecked = true
@@ -85,8 +84,6 @@ class NoteDetailFragment : Fragment() {
 
         binding.etTitle.addTextChangedListener(textWatcher)
         binding.etAddDescription.addTextChangedListener(textWatcher)
-
-        // Обработка нажатий на радиокнопки для выбора цвета
         binding.radioGroup.setOnCheckedChangeListener { _, checkedId ->
             colorResourse = when (checkedId) {
                 binding.rb1.id -> R.drawable.ic_style_gray
@@ -103,19 +100,17 @@ class NoteDetailFragment : Fragment() {
             val itemTime = binding.time.text.toString()
 
             if (noteId != -1) {
-                // Обновляем заметку
                 val updateNote = NoteModel(etTitle, etDescription, itemDate, itemTime, savedColor)
                 updateNote.id = noteId
                 App.appDatabase?.noteDao()?.updateNote(updateNote)
             } else {
-                // Создаём новую заметку
                 App().getInstance()?.noteDao()?.insertNote(
                     NoteModel(
                         title = etTitle,
                         description = etDescription,
                         date = itemDate,
                         time = itemTime,
-                        color = colorResourse // сохраняем выбранный цвет
+                        color = colorResourse
                     )
                 )
             }

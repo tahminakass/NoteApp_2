@@ -28,9 +28,12 @@ class MainActivity : AppCompatActivity() {
 
         val sharedPreferences = PreferenceHelper()
         sharedPreferences.unit(this)
-        if (sharedPreferences.isOnBoardShown) {
-            navController.navigate(R.id.noteFragment)
-        } else if (!sharedPreferences.isOnBoardShown) {
+        if (sharedPreferences.isSignInShowed) {
+            navController.navigate(R.id.action_onBoardFragment_to_signUpFragment)
+            if (sharedPreferences.isSignInShowed) {
+                navController.navigate(R.id.action_signUpFragment_to_noteFragment)
+            }
+        } else if (!sharedPreferences.isSignInShowed) {
             navController.navigate(R.id.onBoardFragment)
         }
     }

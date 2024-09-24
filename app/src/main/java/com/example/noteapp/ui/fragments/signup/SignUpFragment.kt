@@ -62,7 +62,7 @@ class SignUpFragment : Fragment() {
     }
 
     private fun setUpListeners() {
-        binding.btnSignUp.setOnClickListener {
+        binding.btnSign.setOnClickListener {
             signInLauncher.launch(googleSignInClient.signInIntent)
         }
     }

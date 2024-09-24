@@ -53,7 +53,10 @@ class OnBoardFragment : Fragment() {
             }
         }
         binding.txtSkip.setOnClickListener {
-            findNavController().navigate(R.id.noteFragment)
+            val sharedPreferences = PreferenceHelper()
+            sharedPreferences.unit(requireContext())
+            sharedPreferences.isSignInShowed = true
+            findNavController().navigate(R.id.action_onBoardFragment_to_signUpFragment)
         }
     }
 }

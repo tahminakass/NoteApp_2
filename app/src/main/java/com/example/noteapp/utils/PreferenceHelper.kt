@@ -19,4 +19,7 @@ class PreferenceHelper {
         get() = sharedPreferences.getBoolean("recyclerview", false)
         set(value) = sharedPreferences.edit().putBoolean("recyclerview", value).apply()
 
+    var isSignInShowed: Boolean
+        get () = sharedPreferences.getBoolean("sign", false)
+        set(value) = sharedPreferences.edit().putBoolean("sign", value).apply()
 }

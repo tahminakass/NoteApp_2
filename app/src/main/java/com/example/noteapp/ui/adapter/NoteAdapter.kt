@@ -29,13 +29,8 @@ class NoteAdapter(
             binding.itemDate.text = item.date
             binding.itemTime.text = item.time
 
-            // Установка фона контейнера
             val context = binding.root.context
-            Log.e("TAG", "onBind: ${item.color}", )
             binding.containerNote.background = ContextCompat.getDrawable(context, item.color)
-
-            // Альтернатива: если нужно установить цвет через Color.parseColor()
-            // binding.containerNote.setBackgroundColor(Color.parseColor(item.color)) // предполагается, что item.color - строка с цветом
         }
     }
 

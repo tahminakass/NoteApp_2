@@ -26,7 +26,11 @@
         android:id="@+id/onBoardFragment"
         android:name="com.example.noteapp.ui.fragments.onboard.OnBoardFragment"
         android:label="fragment_on_board"
-        tools:layout="@layout/fragment_on_board" />
+        tools:layout="@layout/fragment_on_board" >
+        <action
+            android:id="@+id/action_onBoardFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
     <fragment
         android:id="@+id/noteDetailFragment"
         android:name="com.example.noteapp.ui.fragments.note.NoteDetailFragment"
@@ -43,6 +47,10 @@
         android:id="@+id/signUpFragment"
         android:name="com.example.noteapp.ui.fragments.signup.SignUpFragment"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" />
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+    </fragment>
 
 </navigation>
